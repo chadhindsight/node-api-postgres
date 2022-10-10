@@ -5,7 +5,7 @@ const Pool = require('pg').Pool
 const pool = new Pool({
     user: process.env.user,
     host: 'localhost',
-    database: process.env.database,
+    database: 'tutorialapi',
     password: process.env.password,
     port: process.env.port
 })
@@ -62,7 +62,7 @@ const updateUser = (request, response) => {
 const deleteUser = (request, response) => {
     const id = parseInt(request.params.id)
 
-    pool.query('DELETE FROM users WHERE id = $1', [id], () => {
+    pool.query('DELETE FROM users WHERE id = $1', [id], (error, results) => {
         if (error) {
             throw error
         }
