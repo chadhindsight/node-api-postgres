@@ -10,7 +10,7 @@ const pool = new Pool({
 
 // Get all users
 const getUsers = (request, response) => {
-    pool.query('SELECT * FROM users ORDER BY id ASC', (error, results) => {
+    pool.query('SELECT * FROM users ORDER BY id DESC', (error, results) => {
         if (error) {
             throw error
         }
