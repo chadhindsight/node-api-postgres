@@ -68,7 +68,7 @@ const deleteUser = (request, response) => {
     })
 }
 
-// export functions so they can be used elsewhere
+// export functions so they can be used elsewhere.
 module.exports = {
     getUsers,
     getUserById,
