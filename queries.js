@@ -56,7 +56,7 @@ const updateUser = (request, response) => {
         }
     )
 }
-// Delete a user from DB
+// Delete a user from DB.
 const deleteUser = (request, response) => {
     const id = parseInt(request.params.id)
 
