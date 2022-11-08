@@ -1,5 +1,5 @@
 const Pool = require('pg').Pool
-
+// serie A
 const pool = new Pool({
     user: process.env.user,
     host: 'localhost',
