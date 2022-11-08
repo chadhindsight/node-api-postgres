@@ -1,5 +1,5 @@
 const Pool = require('pg').Pool
-// serie A
+
 const pool = new Pool({
     user: process.env.user,
     host: 'localhost',
@@ -8,7 +8,7 @@ const pool = new Pool({
     port: process.env.port
 })
 
-// Get all users.
+// Get all users
 const getUsers = (request, response) => {
     pool.query('SELECT * FROM users ORDER BY id ASC', (error, results) => {
         if (error) {
