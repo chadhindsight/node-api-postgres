@@ -18,7 +18,6 @@ const getUsers = (request, response) => {
     })
 }
 
-// Get specific user
 const getUserById = (request, response) => {
     const id = parseInt(request.params.id)
 
