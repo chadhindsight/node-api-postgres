@@ -8,7 +8,7 @@ const pool = new Pool({
     port: process.env.port
 })
 
-// Get all users from DB this the one
+// Get all users from DB 
 const getUsers = (request, response) => {
     pool.query('SELECT * FROM users ORDER BY id ASC', (error, result) => {
         if (error) {
