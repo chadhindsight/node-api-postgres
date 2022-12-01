@@ -40,7 +40,7 @@ const createUser = (request, response) => {
         response.status(201).send(`User added with ID: ${results.rows[0].id}`)
     })
 }
-
+// Update a specific user info in DB
 const updateUser = (request, response) => {
     const userID = parseInt(request.params.id)
     const { name, email } = request.body
